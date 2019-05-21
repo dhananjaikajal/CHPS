@@ -1,10 +1,6 @@
-/* Float Elements 
----------------------------------*/
 .fl-lt {float:left;}
 .fl-rt {float:right;}
 
-/* Clear Floated Elements
----------------------------------*/
 .clear {
   clear: both;
   display: block;
@@ -29,8 +25,6 @@
 }
 
 .figure{ margin:0px;}
-
-img{ max-width:100%;}
 
 a, a:hover, a:active{ outline:0px !important}
 
@@ -76,16 +70,14 @@ p{
 	margin:0;
 }
 
-/* Header Styles
----------------------------------*/
 
 .header{
 	text-align:center;
 	background:url(../img/pw_maze_black_2X.png) left top repeat;
-	padding:280px 0;
+	padding:100px 0;
 }
 .logo{
-	width:130px;
+	//width:130px;
 	margin:0 auto 35px;
 }
 .header h1{
@@ -155,10 +147,9 @@ color: #fff;
 	color:#fff !important;
 }
 
-/* Navigation
----------------------------------*/
 .main-nav-outer{
 	padding:0px;
+	padding-bottom: 9px;
 	border-bottom:1px solid #dddddd;
 	box-shadow:0 4px 5px -3px #ececec;
 	position:relative;
@@ -175,7 +166,6 @@ color: #fff;
 	margin:0 1px;
 }
 .main-nav li a{
-	display:inline-block;
 	color:#222222;
 	text-transform:uppercase;
 	font-family: 'Montserrat', sans-serif;
@@ -185,6 +175,7 @@ color: #fff;
 	transition:all 0.3s ease-in-out;
 	-moz-transition:all 0.3s ease-in-out;
 	-webkit-transition:all 0.3s ease-in-out;
+	font-size: initial;
 }
 
 .main-nav li a:hover{ 
@@ -192,17 +183,9 @@ color: #fff;
 	color: #7cc576;
 }
 
-.small-logo{ 
-	padding:0 32px;
-}
-
 .main-section{
-	padding:90px 0 110px;
+	padding:40px 0 110px;
 }
-
-
-/* Services
----------------------------------*/
 
 .service-list{
 	padding:0 0 0 0;
@@ -228,8 +211,6 @@ color: #fff;
 	background:#fafafa;
 }
 
-/* Featured Work
----------------------------------*/
 .featured-work{
 	font-size:14px;
 }
@@ -295,9 +276,6 @@ color: #fff;
 	color: #111;
 }
 
-
-/* Portfolio
----------------------------------*/
 .Portfolio-nav{
 	padding:0;
 	margin:0 0 45px 0;
@@ -360,13 +338,14 @@ color: #fff;
 	text-decoration:none;
 }
 img {
-   max-width:100%;
+   max-width:21%;
 }
-
-/* no transition on .isotope container */
+.small-img {
+	max-width:12%;
+	padding-left: 55px;
+ }
 
 .isotope .isotope-item {
-  /* change duration value to whatever you like */
   -webkit-transition-duration: 0.6s;
      -moz-transition-duration: 0.6s;
           transition-duration: 0.6s;
@@ -382,8 +361,6 @@ img {
 	padding-bottom:60px;
 }
 
-/* Clients
----------------------------------*/
 .client-part{
 	background:url(../img/section-bg1.jpg) center center no-repeat;
 	background-size:cover;
@@ -466,16 +443,14 @@ border: 2px solid #fff;
 	display:inline-block;
 	margin: 0 20px;
 }
-.main-section.team{
-	padding:85px 0;
+.aboutUs_width{
+	width:50%
 }
 .main-section.team h6{
 	margin-bottom:40px;
 }
 
 
-/* Team
----------------------------------*/
 .team-leader-block{
 	max-width:993px;
 	margin:0 auto;
@@ -572,8 +547,6 @@ border: 2px solid #fff;
 	color:#dd4b39;
 }
 
-/* Talk Business
----------------------------------*/
 .business-talking{
 	background:black;
 	background-size:cover;
@@ -591,8 +564,6 @@ border: 2px solid #fff;
 }
 
 
-/* Contact
----------------------------------*/
 .main-section.contact{
 	padding:90px 0 100px;
 }
@@ -764,8 +735,6 @@ border: 2px solid #fff;
 	display:block;
 }
 
-/* Footer
----------------------------------*/
 
 .footer{
 	background:url(../img/pw_maze_black_2X.png) left top repeat;
@@ -868,7 +837,6 @@ border: 2px solid #fff;
     visibility: hidden;
     max-width: 50px;
     height: 50px;
-    /*margin-left: -125px;*/
     margin: auto;
     background-color: #333;
     color: #fff;
@@ -961,3 +929,150 @@ border: 2px solid #fff;
     from {bottom: 30px; opacity: 1;}
     to {bottom: 60px; opacity: 0;}
 }
+
+.slider {
+	position: relative;
+	height: 400px;
+	width: 100%
+}
+
+.slider.fullscreen {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0
+}
+
+.slider.fullscreen ul.slides {
+	height: 100%
+}
+
+.slider.fullscreen ul.indicators {
+	z-index: 2;
+	bottom: 30px
+}
+
+.slider .slides {
+	background-color: #9e9e9e;
+	margin: 0;
+	height: 400px
+}
+
+.slider .slides li {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	height: inherit;
+	overflow: hidden
+}
+
+.slider .slides li img {
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	background-position: center
+}
+
+.slider .slides li .caption {
+	color: #fff;
+	position: absolute;
+	top: 15%;
+	left: 15%;
+	width: 70%;
+	opacity: 0
+}
+
+.slider .slides li .caption p {
+	color: #e0e0e0
+}
+
+.slider .slides li.active {
+	z-index: 2
+}
+
+.slider .indicators {
+	position: absolute;
+	text-align: center;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0
+}
+
+.slider .indicators .indicator-item {
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	height: 16px;
+	width: 16px;
+	margin: 0 12px;
+	background-color: #e0e0e0;
+	transition: background-color .3s;
+	border-radius: 50%
+}
+
+.slider .indicators .indicator-item.active {
+	background-color: #4CAF50
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+	height: 3px;
+	background: #c2c0c2;
+	border: none
+}
+
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	border: none;
+	height: 14px;
+	width: 14px;
+	border-radius: 50%;
+	background-color: #26a69a;
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	margin: -5px 0 0 0;
+	transition: .3s
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+	background: #ccc
+}
+
+nav ul a .fontcls{
+	transition: background-color .3s;
+	font-size: none;
+	color: #fff;
+	display: block;
+	padding: 0 15px;
+	cursor: pointer
+}
+
+.jssorl-009-spin img {
+	animation-name: jssorl-009-spin;
+	animation-duration: 1.6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes jssorl-009-spin {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+
+.jssorb051 .i {position:absolute;cursor:pointer;}
+.jssorb051 .i .b {fill:#fff;fill-opacity:0.5;}
+.jssorb051 .i:hover .b {fill-opacity:.7;}
+.jssorb051 .iav .b {fill-opacity: 1;}
+.jssorb051 .i.idn {opacity:.3;}
+
+.jssora051 {display:block;position:absolute;cursor:pointer;}
+.jssora051 .a {fill:none;stroke:#fff;stroke-width:360;stroke-miterlimit:10;}
+.jssora051:hover {opacity:.8;}
+.jssora051.jssora051dn {opacity:.5;}
+.jssora051.jssora051ds {opacity:.3;pointer-events:none;}
